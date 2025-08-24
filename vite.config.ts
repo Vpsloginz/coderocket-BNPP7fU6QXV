@@ -12,12 +12,16 @@ export default defineConfig({
     assetsDir: 'assets',
     sourcemap: false,
     minify: 'esbuild',
-    target: 'es2015',
+    target: 'es2020',
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          router: ['react-router-dom']
+          router: ['react-router-dom'],
+          ui: ['@radix-ui/react-accordion', '@radix-ui/react-dialog', '@radix-ui/react-select', '@radix-ui/react-checkbox'],
+          icons: ['lucide-react'],
+          utils: ['clsx', 'class-variance-authority', 'tailwind-merge']
         }
       }
     }
