@@ -23,22 +23,47 @@ export default defineConfig({
           icons: ['lucide-react'],
           utils: ['clsx', 'class-variance-authority', 'tailwind-merge']
         }
+      },
+      onwarn(warning, warn) {
+        // Suppress certain warnings during build
+        if (warning.code === 'UNUSED_EXTERNAL_IMPORT') return
+        warn(warning)
       }
+    },
+    // Build timeout and error handling
+    emptyOutDir: true,
+    reportCompressedSize: false,
+    // Ensure build fails fast on errors
+    watch: null
+  },
+  // Development server configuration
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+    strictPort: false,
+    hmr: {
+      timeout: 30000
     }
+  },
+  // Preview server configuration
+  preview: {
+    host: '0.0.0.0',
+    port: 4173,
+    strictPort: false
+  },
+  // Dependency optimization
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+    exclude: []
+  },
+  // Error handling
+  esbuild: {
+    logOverride: { 'this-is-undefined-in-esm': 'silent' }
+  }
   },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
-  },
-  server: {
-    host: '0.0.0.0',
-    port: 5173,
-    strictPort: false
-  },
-  preview: {
-    host: '0.0.0.0',
-    port: 4173,
-    strictPort: false
   }
 })

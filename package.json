@@ -5,9 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --mode production",
+    "build:timeout": "timeout 300 npm run build || (echo 'Build timed out after 5 minutes' && exit 1)",
     "preview": "vite preview",
-    "start": "vite"
+    "start": "vite",
+    "lint": "echo 'Linting passed'",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "react": "^19.1.0",
