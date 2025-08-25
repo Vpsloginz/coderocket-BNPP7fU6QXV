@@ -59,7 +59,6 @@ export default defineConfig({
   // Error handling
   esbuild: {
     logOverride: { 'this-is-undefined-in-esm': 'silent' }
-  }
   },
   resolve: {
     alias: {
