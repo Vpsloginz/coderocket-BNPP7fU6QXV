@@ -29,12 +29,11 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-4 gap-8 mb-12">
           <div className="space-y-6">
-            <Link to="/">
-              <img 
-                src="https://spartanox.com/assets/img/logo/logo-2.svg" 
-                alt="Spartanox" 
-                className="h-9 w-auto"
-              />
+            <Link to="/" className="flex items-center">
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-gradient-to-r from-[#aeff1c] to-[#7dd321] rounded transform rotate-45"></div>
+                <span className="text-2xl font-bold text-white tracking-tight">SPARTANOXX</span>
+              </div>
             </Link>
             <p className="text-gray-300 leading-relaxed">
               Shaping the world of your investment with our expertise and dedication to excellence.
@@ -74,7 +73,7 @@ const Footer = () => {
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-300 text-sm">
-              © 2024 Spartanox. All rights reserved.
+              © 2024 Spartanoxx. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-gray-300 hover:text-white">Terms & Conditions</a>

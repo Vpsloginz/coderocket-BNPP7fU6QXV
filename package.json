@@ -1,16 +1,13 @@
 {
-  "name": "spartanox-trading-platform",
+  "name": "tailwind-ai-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build --mode production",
-    "build:timeout": "timeout 300 npm run build || (echo 'Build timed out after 5 minutes' && exit 1)",
-    "preview": "vite preview",
-    "start": "vite",
-    "lint": "echo 'Linting passed'",
-    "type-check": "tsc --noEmit"
+    "dev": "npm run typecheck && vite",
+    "typecheck": "tsc --noEmit --isolatedModules",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^19.1.0",
