@@ -16,7 +16,7 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6 text-[#aeff1c]" />,
       title: "Email Support",
-      details: ["support@spartanoxx.com", "info@spartanoxx.com"],
+      details: ["support@acapital.com", "info@acapital.com"],
       description: "Response within 2 hours"
     },
     {

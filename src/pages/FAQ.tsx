@@ -15,7 +15,7 @@ const FAQ = () => {
           answer: "The minimum deposit varies by account type: Starter Account requires $250, Professional Account requires $2,500, and VIP Account requires $25,000. You can start trading immediately after your deposit is processed."
         },
         {
-          question: "Is my money safe with Spartanoxx?",
+          question: "Is my money safe with A Capital?",
           answer: "Yes, your funds are completely secure. We use segregated client accounts, meaning your money is kept separate from company funds. We're also regulated by top-tier financial authorities and use bank-level security measures."
         }
       ]
@@ -81,7 +81,7 @@ const FAQ = () => {
             Frequently Asked Questions
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Find answers to the most common questions about trading with Spartanoxx. 
+            Find answers to the most common questions about trading with A Capital. 
             Can't find what you're looking for? Contact our support team.
           </p>
         </div>
