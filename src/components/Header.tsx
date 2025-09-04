@@ -61,7 +61,7 @@ const Header = () => {
             <Link to="/" className="flex items-center">
               <div className="flex items-center space-x-2">
                 <div className="w-8 h-8 bg-gradient-to-r from-[#aeff1c] to-[#7dd321] rounded transform rotate-45"></div>
-                <span className="text-2xl font-bold text-[#104042] tracking-tight">A CAPITAL</span>
+                <span className="text-2xl font-bold text-[#104042] tracking-tight">A-CAPITAL</span>
               </div>
             </Link>
           </div>

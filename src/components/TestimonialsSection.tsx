@@ -6,7 +6,7 @@ const TestimonialsSection = () => {
     {
       name: "Elena Martinez",
       role: "Professional Trader",
-      content: "A Capital has transformed my trading experience. The platform is incredibly user-friendly, and the execution speed is unmatched. I've seen significant improvements in my trading performance since switching to their ECN account.",
+      content: "A-Capital has transformed my trading experience. The platform is incredibly user-friendly, and the execution speed is unmatched. I've seen significant improvements in my trading performance since switching to their ECN account.",
       rating: 5,
       image: "https://picsum.photos/id/494/80/80",
       profit: "+127%"
@@ -14,7 +14,7 @@ const TestimonialsSection = () => {
     {
       name: "Marcus Johnson",
       role: "Investment Advisor",
-      content: "The educational resources and market analysis provided by A Capital are exceptional. Their customer support team is always available when I need assistance, and the trading conditions are among the best in the industry.",
+      content: "The educational resources and market analysis provided by A-Capital are exceptional. Their customer support team is always available when I need assistance, and the trading conditions are among the best in the industry.",
       rating: 5,
       image: "https://picsum.photos/id/507/80/80",
       profit: "+89%"
@@ -22,7 +22,7 @@ const TestimonialsSection = () => {
     {
       name: "Sarah Chen",
       role: "Day Trader",
-      content: "I've been trading with A Capital for over 2 years now. The tight spreads and fast execution have helped me maximize my profits. The mobile app is fantastic for trading on the go.",
+      content: "I've been trading with A-Capital for over 2 years now. The tight spreads and fast execution have helped me maximize my profits. The mobile app is fantastic for trading on the go.",
       rating: 5,
       image: "https://picsum.photos/id/548/80/80",
       profit: "+156%"
@@ -37,7 +37,7 @@ const TestimonialsSection = () => {
             What Our Clients Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Hear from successful traders who have chosen A Capital as their trusted trading partner
+            Hear from successful traders who have chosen A-Capital as their trusted trading partner
           </p>
         </div>
 
@@ -91,7 +91,7 @@ const TestimonialsSection = () => {
             Ready to Start Your Trading Journey?
           </h3>
           <p className="text-lg text-gray-800 mb-8 max-w-2xl mx-auto">
-            Join thousands of successful traders and experience the difference with A Capital
+            Join thousands of successful traders and experience the difference with A-Capital
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-black hover:bg-gray-800 text-white px-8 py-4 text-lg rounded-full">

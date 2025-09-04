@@ -89,7 +89,7 @@ const HowToStart = () => {
             Ready to Start Your Trading Journey?
           </h2>
           <p className="text-lg text-gray-800 mb-6">
-            Join thousands of successful traders who chose A Capital as their trading partner.
+            Join thousands of successful traders who chose A-Capital as their trading partner.
           </p>
           <Button className="bg-black hover:bg-gray-800 text-white px-8 py-3 text-lg">
             Create Account Now

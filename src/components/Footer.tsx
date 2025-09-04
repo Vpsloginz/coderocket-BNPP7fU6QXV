@@ -32,7 +32,7 @@ const Footer = () => {
             <Link to="/" className="flex items-center">
               <div className="flex items-center space-x-2">
                 <div className="w-8 h-8 bg-gradient-to-r from-[#aeff1c] to-[#7dd321] rounded transform rotate-45"></div>
-                <span className="text-2xl font-bold text-white tracking-tight">A CAPITAL</span>
+                <span className="text-2xl font-bold text-white tracking-tight">A-CAPITAL</span>
               </div>
             </Link>
             <p className="text-gray-300 leading-relaxed">
@@ -73,7 +73,7 @@ const Footer = () => {
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-300 text-sm">
-              © 2024 A Capital. All rights reserved.
+              © 2024 A-Capital. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-gray-300 hover:text-white">Terms & Conditions</a>
