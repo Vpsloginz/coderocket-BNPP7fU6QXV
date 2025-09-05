@@ -18,7 +18,7 @@ const AboutSection = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-4xl lg:text-5xl font-bold text-[#104042]">
-                Why Choose Spartanox?
+                Why Choose A-Capital?
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
                 Experience the difference with our cutting-edge trading platform designed for both beginners and professional traders.
