@@ -42,7 +42,7 @@ const WhyChooseUs = () => {
             Why Traders Choose Us
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover what makes A-Capital the preferred choice for traders worldwide
+            Discover what makes Spartanox the preferred choice for traders worldwide
           </p>
         </div>
 
