@@ -1,6 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion'
 import { Button } from '../components/ui/button'
-
 const FAQ = () => {
   const faqCategories = [
     {
@@ -12,7 +11,7 @@ const FAQ = () => {
         },
         {
           question: "What is the minimum deposit required?",
-          answer: "The minimum deposit varies by account type: Starter Account requires $250, Professional Account requires $2,500, and VIP Account requires $25,000. You can start trading immediately after your deposit is processed."
+          answer: "The minimum deposit varies by account type: Starter Account requires $250, Professional Account requires $2,500, VIP Account requires $25,000, and Managed Account requires $50,000. You can start trading immediately after your deposit is processed."
         },
         {
           question: "Is my money safe with A5 Capital?",
@@ -32,8 +31,29 @@ const FAQ = () => {
           answer: "Forex markets are available 24/5 from Sunday 5 PM EST to Friday 5 PM EST. Stock markets follow their respective exchange hours, and commodities have varying trading hours. Our platform shows real-time market status."
         },
         {
-          question: "Do you offer demo accounts?",
-          answer: "Yes, we provide free demo accounts with $10,000 virtual funds. This allows you to practice trading, test strategies, and familiarize yourself with our platform without risking real money."
+          question: "Do you offer managed accounts?",
+          answer: "Yes, we offer professional managed accounts starting from $50,000. Our experienced fund managers use proven strategies and risk management protocols to manage your portfolio. You'll receive monthly performance reports and have direct communication with your assigned manager."
+        }
+      ]
+    },
+    {
+      title: "Managed Accounts",
+      questions: [
+        {
+          question: "How do managed accounts work?",
+          answer: "With a managed account, our professional fund managers trade on your behalf using proven strategies. You maintain ownership of your funds while our experts handle the day-to-day trading decisions. You'll receive regular performance reports and can communicate directly with your assigned manager."
+        },
+        {
+          question: "What is the minimum for a managed account?",
+          answer: "The minimum deposit for a managed account is $50,000. This allows our managers to implement diversified strategies and proper risk management across multiple instruments and positions."
+        },
+        {
+          question: "What fees are associated with managed accounts?",
+          answer: "Managed accounts have a transparent fee structure including a management fee and performance fee. The exact fees depend on your account size and chosen strategy. All fees are clearly outlined before you commit to the service."
+        },
+        {
+          question: "Can I withdraw from my managed account anytime?",
+          answer: "Yes, you can request withdrawals from your managed account at any time. However, we recommend discussing withdrawal timing with your account manager to avoid disrupting active trading strategies."
         }
       ]
     },
@@ -72,7 +92,6 @@ const FAQ = () => {
       ]
     }
   ]
-
   return (
     <main className="py-16 lg:py-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,7 +104,6 @@ const FAQ = () => {
             Can't find what you're looking for? Contact our support team.
           </p>
         </div>
-
         <div className="space-y-12">
           {faqCategories.map((category, categoryIndex) => (
             <div key={categoryIndex}>
@@ -109,7 +127,6 @@ const FAQ = () => {
             </div>
           ))}
         </div>
-
         <div className="mt-16 bg-[#aeff1c] rounded-2xl p-8 lg:p-12 text-center">
           <h2 className="text-3xl font-bold text-black mb-4">
             Still Have Questions?
@@ -130,5 +147,4 @@ const FAQ = () => {
     </main>
   )
 }
-
 export default FAQ

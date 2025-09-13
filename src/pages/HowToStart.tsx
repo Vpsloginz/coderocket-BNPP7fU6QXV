@@ -1,6 +1,5 @@
 import { Button } from '../components/ui/button'
 import { ArrowRight, UserPlus, CreditCard, TrendingUp } from 'lucide-react'
-
 const HowToStart = () => {
   const steps = [
     {
@@ -31,13 +30,12 @@ const HowToStart = () => {
       description: "Access our advanced trading platform and begin your trading journey with confidence.",
       details: [
         "Download our trading platform",
-        "Explore demo account first",
-        "Use our educational resources",
+        "Access educational resources",
+        "Consider managed account options",
         "Start with small positions"
       ]
     }
   ]
-
   return (
     <main className="py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,7 +48,6 @@ const HowToStart = () => {
             trading quickly and safely with full support along the way.
           </p>
         </div>
-
         <div className="space-y-16 mb-16">
           {steps.map((step, index) => (
             <div key={index} className="grid lg:grid-cols-2 gap-12 items-center">
@@ -83,7 +80,67 @@ const HowToStart = () => {
             </div>
           ))}
         </div>
-
+        {/* Account Options */}
+        <div className="bg-gray-50 rounded-2xl p-12 mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
+            Choose Your Trading Approach
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-xl border border-gray-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Self-Directed Trading</h3>
+              <p className="text-gray-600 mb-6">
+                Take control of your trading with our advanced platforms and educational resources. 
+                Perfect for traders who want to make their own decisions.
+              </p>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center text-sm text-gray-700">
+                  <ArrowRight className="w-4 h-4 text-[#aeff1c] mr-2" />
+                  Full platform access
+                </li>
+                <li className="flex items-center text-sm text-gray-700">
+                  <ArrowRight className="w-4 h-4 text-[#aeff1c] mr-2" />
+                  Educational resources
+                </li>
+                <li className="flex items-center text-sm text-gray-700">
+                  <ArrowRight className="w-4 h-4 text-[#aeff1c] mr-2" />
+                  24/7 support
+                </li>
+              </ul>
+              <Button className="w-full bg-[#104042] hover:bg-[#0d3335] text-white">
+                Start Self-Directed
+              </Button>
+            </div>
+            <div className="bg-white p-8 rounded-xl border-2 border-[#aeff1c]">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-xl font-bold text-gray-900">Managed Account</h3>
+                <span className="bg-[#aeff1c] text-black px-3 py-1 rounded-full text-sm font-bold">
+                  Professional
+                </span>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Let our experienced fund managers handle your investments with proven strategies 
+                and professional risk management.
+              </p>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center text-sm text-gray-700">
+                  <ArrowRight className="w-4 h-4 text-[#aeff1c] mr-2" />
+                  Professional management
+                </li>
+                <li className="flex items-center text-sm text-gray-700">
+                  <ArrowRight className="w-4 h-4 text-[#aeff1c] mr-2" />
+                  Dedicated manager
+                </li>
+                <li className="flex items-center text-sm text-gray-700">
+                  <ArrowRight className="w-4 h-4 text-[#aeff1c] mr-2" />
+                  Monthly reports
+                </li>
+              </ul>
+              <Button className="w-full bg-[#aeff1c] hover:bg-[#9ee619] text-black font-bold">
+                Learn About Managed Accounts
+              </Button>
+            </div>
+          </div>
+        </div>
         <div className="bg-[#aeff1c] rounded-2xl p-8 lg:p-12 text-center">
           <h2 className="text-3xl font-bold text-black mb-4">
             Ready to Start Your Trading Journey?
@@ -99,5 +156,4 @@ const HowToStart = () => {
     </main>
   )
 }
-
 export default HowToStart

@@ -1,5 +1,4 @@
 import { TrendingUp, DollarSign, BarChart3, Shield, Smartphone, Globe, Clock, Award } from 'lucide-react'
-
 const Services = () => {
   const mainServices = [
     {
@@ -22,12 +21,11 @@ const Services = () => {
     },
     {
       icon: <Shield className="w-8 h-8 text-[#104042]" />,
-      title: "Cryptocurrency CFDs",
-      description: "Trade Bitcoin, Ethereum, and 20+ cryptocurrencies with the ability to go long or short on price movements.",
-      features: ["24/7 crypto trading", "Long & short positions", "No wallet required"]
+      title: "Managed Accounts",
+      description: "Professional portfolio management by experienced fund managers with proven track records and risk management.",
+      features: ["Professional management", "Dedicated manager", "Monthly performance reports"]
     }
   ]
-
   const additionalServices = [
     {
       icon: <Smartphone className="w-6 h-6 text-[#aeff1c]" />,
@@ -50,7 +48,6 @@ const Services = () => {
       description: "Free webinars, tutorials, and market analysis to improve your trading"
     }
   ]
-
   return (
     <section className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,7 +59,6 @@ const Services = () => {
             Comprehensive trading solutions designed to help you succeed in today's dynamic financial markets
           </p>
         </div>
-
         {/* Main Services */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {mainServices.map((service, index) => (
@@ -87,7 +83,6 @@ const Services = () => {
             </div>
           ))}
         </div>
-
         {/* Additional Services */}
         <div className="bg-gray-50 rounded-2xl p-12">
           <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
@@ -105,7 +100,6 @@ const Services = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -119,7 +113,7 @@ const Services = () => {
               Open Live Account
             </button>
             <button className="border-2 border-[#104042] text-[#104042] hover:bg-[#104042] hover:text-white font-bold px-8 py-4 rounded-full transition-colors">
-              Try Demo Account
+              Learn About Managed Accounts
             </button>
           </div>
         </div>
@@ -127,5 +121,4 @@ const Services = () => {
     </section>
   )
 }
-
 export default Services

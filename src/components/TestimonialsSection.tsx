@@ -1,10 +1,8 @@
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 import { Button } from './ui/button'
 import { useState } from 'react'
-
 const TestimonialsSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
-
   const testimonials = [
     {
       name: "Michael Rodriguez",
@@ -19,14 +17,14 @@ const TestimonialsSection = () => {
     },
     {
       name: "Sarah Chen",
-      role: "Swing Trader",
+      role: "Managed Account Client",
       location: "San Francisco, CA",
-      content: "What impressed me most was their customer service. When I had issues with a withdrawal last year, David from support called me personally within 2 hours. The mobile app works flawlessly - I've executed trades from airports, coffee shops, you name it. My average monthly return has been 12% since joining.",
+      content: "Switching to a managed account was the best decision I made. My portfolio manager, Jennifer, has consistently delivered 15% annual returns while keeping risk low. I get detailed monthly reports and can reach her anytime. Much better than trying to trade myself and losing money.",
       rating: 5,
       image: "https://picsum.photos/id/494/80/80",
       profit: "+156%",
       tradingSince: "2020",
-      accountType: "VIP"
+      accountType: "Managed"
     },
     {
       name: "James Thompson",
@@ -37,13 +35,13 @@ const TestimonialsSection = () => {
       image: "https://picsum.photos/id/548/80/80",
       profit: "+234%",
       tradingSince: "2018",
-      accountType: "ECN"
+      accountType: "VIP"
     },
     {
       name: "Maria Gonzalez",
       role: "Part-time Trader",
       location: "Barcelona, Spain",
-      content: "I started with just $500 as a complete beginner. Their educational webinars every Tuesday helped me understand risk management. Lost money in the first 3 months, but their demo account let me practice without pressure. Now I'm consistently profitable and withdrew $2,400 last quarter.",
+      content: "I started with just $500 as a complete beginner. Their educational webinars every Tuesday helped me understand risk management. Lost money in the first 3 months, but their support team was patient and helpful. Now I'm consistently profitable and withdrew $2,400 last quarter.",
       rating: 4,
       image: "https://picsum.photos/id/573/80/80",
       profit: "+67%",
@@ -52,14 +50,14 @@ const TestimonialsSection = () => {
     },
     {
       name: "Robert Kim",
-      role: "Algorithmic Trader",
+      role: "Managed Account Client",
       location: "Seoul, South Korea",
-      content: "Running 3 EAs simultaneously on their VPS. Latency to their servers is under 1ms from Seoul, which is crucial for my high-frequency strategies. Had one EA malfunction and lose $800, but their trade reconstruction team helped me get a partial refund. Very professional approach.",
+      content: "My managed account has been performing excellently. The fund manager uses a diversified approach across forex, commodities, and indices. I appreciate the transparency - I get weekly updates and can see every trade. The 18% return last year exceeded my expectations significantly.",
       rating: 5,
       image: "https://picsum.photos/id/582/80/80",
       profit: "+312%",
       tradingSince: "2017",
-      accountType: "VIP"
+      accountType: "Managed"
     },
     {
       name: "Amanda Foster",
@@ -74,14 +72,14 @@ const TestimonialsSection = () => {
     },
     {
       name: "David Wilson",
-      role: "Retired Investor",
+      role: "Managed Account Client",
       location: "Melbourne, Australia",
-      content: "At 62, I was hesitant about online trading. But A5 Capital's account manager, Jennifer, walked me through everything over three phone calls. I trade conservatively - mostly major pairs with 1:50 leverage. Small profits, but consistent. Withdrew $1,800 for my grandson's birthday last month.",
+      content: "At 62, I was hesitant about trading. The managed account service has been perfect for me. My manager handles everything while I receive monthly reports. The conservative approach suits my retirement planning, and I've seen steady 12% annual growth without the stress of daily trading.",
       rating: 4,
       image: "https://picsum.photos/id/612/80/80",
       profit: "+34%",
       tradingSince: "2023",
-      accountType: "Standard"
+      accountType: "Managed"
     },
     {
       name: "Lisa Park",
@@ -106,23 +104,18 @@ const TestimonialsSection = () => {
       accountType: "Professional"
     }
   ]
-
   const testimonialsPerPage = 3
   const totalSlides = Math.ceil(testimonials.length / testimonialsPerPage)
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % totalSlides)
   }
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides)
   }
-
   const getCurrentTestimonials = () => {
     const start = currentSlide * testimonialsPerPage
     return testimonials.slice(start, start + testimonialsPerPage)
   }
-
   return (
     <section className="bg-gray-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -137,27 +130,27 @@ const TestimonialsSection = () => {
             Showing {testimonials.length} verified client reviews
           </div>
         </div>
-
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {getCurrentTestimonials().map((testimonial, index) => (
             <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 relative">
               <Quote className="w-8 h-8 text-[#aeff1c] mb-4" />
-              
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <div className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                <div className={`text-xs px-2 py-1 rounded ${
+                  testimonial.accountType === 'Managed' 
+                    ? 'text-[#aeff1c] bg-[#aeff1c]/10 border border-[#aeff1c]/20' 
+                    : 'text-gray-500 bg-gray-100'
+                }`}>
                   {testimonial.accountType}
                 </div>
               </div>
-              
               <p className="text-gray-700 mb-6 leading-relaxed text-sm">
                 "{testimonial.content}"
               </p>
-              
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <img 
@@ -179,7 +172,6 @@ const TestimonialsSection = () => {
             </div>
           ))}
         </div>
-
         <div className="flex justify-center items-center space-x-4 mb-16">
           <Button 
             variant="outline" 
@@ -189,7 +181,6 @@ const TestimonialsSection = () => {
           >
             <ChevronLeft className="w-4 h-4" />
           </Button>
-          
           <div className="flex space-x-2">
             {Array.from({ length: totalSlides }).map((_, index) => (
               <button
@@ -201,7 +192,6 @@ const TestimonialsSection = () => {
               />
             ))}
           </div>
-          
           <Button 
             variant="outline" 
             size="sm" 
@@ -211,7 +201,6 @@ const TestimonialsSection = () => {
             <ChevronRight className="w-4 h-4" />
           </Button>
         </div>
-
         <div className="bg-gradient-to-r from-[#aeff1c] to-[#9ee619] rounded-3xl p-12 text-center">
           <h3 className="text-3xl lg:text-4xl font-bold text-black mb-4">
             Ready to Start Your Trading Journey?
@@ -224,11 +213,10 @@ const TestimonialsSection = () => {
               Open Live Account
             </Button>
             <Button variant="outline" className="border-black text-black hover:bg-black hover:text-white px-8 py-4 text-lg rounded-full">
-              Try Demo Account
+              Learn About Managed Accounts
             </Button>
           </div>
         </div>
-
         {/* Trust Indicators */}
         <div className="mt-16 grid md:grid-cols-4 gap-8 text-center">
           <div className="space-y-2">
@@ -257,5 +245,4 @@ const TestimonialsSection = () => {
     </section>
   )
 }
-
 export default TestimonialsSection

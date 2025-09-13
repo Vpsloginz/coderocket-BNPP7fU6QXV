@@ -5,15 +5,13 @@ import { Checkbox } from '../components/ui/checkbox'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select'
 import { Link } from 'react-router-dom'
 import { Shield, CheckCircle, Users, Award } from 'lucide-react'
-
 const SignUp = () => {
   const benefits = [
-    { icon: <CheckCircle className="w-5 h-5 text-[#aeff1c]" />, text: "Free demo account with $10,000 virtual funds" },
+    { icon: <CheckCircle className="w-5 h-5 text-[#aeff1c]" />, text: "Professional managed account options available" },
     { icon: <CheckCircle className="w-5 h-5 text-[#aeff1c]" />, text: "Access to 100+ trading instruments" },
     { icon: <CheckCircle className="w-5 h-5 text-[#aeff1c]" />, text: "24/7 multilingual customer support" },
     { icon: <CheckCircle className="w-5 h-5 text-[#aeff1c]" />, text: "Advanced trading platforms (MT4/MT5)" }
   ]
-
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,7 +26,6 @@ const SignUp = () => {
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Start Trading Today</h1>
               <p className="text-xl text-gray-600">Join over 770,000 traders worldwide</p>
             </div>
-
             <div className="space-y-4 mb-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
@@ -37,7 +34,6 @@ const SignUp = () => {
                 </div>
               ))}
             </div>
-
             <div className="grid grid-cols-3 gap-4 text-center">
               <div className="bg-white p-4 rounded-lg shadow-sm">
                 <Users className="w-8 h-8 text-[#104042] mx-auto mb-2" />
@@ -56,14 +52,12 @@ const SignUp = () => {
               </div>
             </div>
           </div>
-
           {/* Right Column - Form */}
           <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-2">Create Your Account</h2>
               <p className="text-gray-600">Get started in less than 3 minutes</p>
             </div>
-
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
@@ -87,7 +81,6 @@ const SignUp = () => {
                   />
                 </div>
               </div>
-
               <div>
                 <Label htmlFor="email" className="text-sm font-medium text-gray-700">Email Address *</Label>
                 <Input 
@@ -98,7 +91,6 @@ const SignUp = () => {
                   required
                 />
               </div>
-
               <div>
                 <Label htmlFor="phone" className="text-sm font-medium text-gray-700">Phone Number *</Label>
                 <Input 
@@ -109,7 +101,6 @@ const SignUp = () => {
                   required
                 />
               </div>
-
               <div>
                 <Label htmlFor="country" className="text-sm font-medium text-gray-700">Country of Residence *</Label>
                 <Select>
@@ -130,7 +121,6 @@ const SignUp = () => {
                   </SelectContent>
                 </Select>
               </div>
-
               <div>
                 <Label htmlFor="accountType" className="text-sm font-medium text-gray-700">Preferred Account Type</Label>
                 <Select>
@@ -138,14 +128,13 @@ const SignUp = () => {
                     <SelectValue placeholder="Select account type" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="demo">Demo Account (Free)</SelectItem>
                     <SelectItem value="starter">Starter Account (Min. $250)</SelectItem>
                     <SelectItem value="professional">Professional Account (Min. $2,500)</SelectItem>
                     <SelectItem value="vip">VIP Account (Min. $25,000)</SelectItem>
+                    <SelectItem value="managed">Managed Account (Min. $50,000)</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
-
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <Checkbox id="terms" className="mt-1" required />
@@ -169,12 +158,10 @@ const SignUp = () => {
                   </Label>
                 </div>
               </div>
-
               <Button className="w-full bg-[#aeff1c] hover:bg-[#9ee619] text-black font-bold h-12 text-lg">
                 Create Trading Account
               </Button>
             </form>
-
             <div className="mt-8 text-center">
               <p className="text-gray-600 text-sm">
                 Already have an account?{' '}
@@ -183,7 +170,6 @@ const SignUp = () => {
                 </Link>
               </p>
             </div>
-
             <div className="mt-6 pt-6 border-t border-gray-200">
               <div className="flex items-center justify-center space-x-4 text-xs text-gray-500">
                 <span>🔒 Your data is protected with 256-bit SSL encryption</span>
@@ -195,5 +181,4 @@ const SignUp = () => {
     </main>
   )
 }
-
 export default SignUp
